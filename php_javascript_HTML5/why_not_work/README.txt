@@ -11,4 +11,4 @@ https://en.wikipedia.org/wiki/Cross-site_scripting
 (2) ok when i previously uploads AAA.html then it worked........today it did not work got the same suspicious filter from A .....
 but when i uploaded BBB.html it worked ..... therefore suspicious filtering must logged url for AAA.html as suspicious because the key was not valid for 5 minutes till it was made valid by google after 5 minutes. (i think)
 
-(3) ok ... about an hour or so later, i got completely locked out of mydomain ..... network admin power.
+(3) ok ... about an hour or so later, i got completely locked out of mydomain ..... network admin power ...... i saw a "502" Bad Gateway ........ then in browser can not go to homepage there.

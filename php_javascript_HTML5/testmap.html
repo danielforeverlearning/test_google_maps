@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>testmap v0.5</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #mymapdiv {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+	<p>hi i am putting random text here</p>
+	<p>does the div below show google maps</p>
+	<p>that div has id of mymapdiv</p>
+	<p>oh please work</p>
+    <div id="mymapdiv"></div>
+    <script>
+      var map;
+      function holycow() {
+        map = new google.maps.Map(document.getElementById('mymapdiv'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOtn0irvRBuShIZHi831nqZ0TgTgsW9sY&callback=holycow" async defer>
+	</script>
+  </body>
+</html>

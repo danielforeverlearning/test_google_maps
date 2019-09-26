@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>latlon v0.1</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+	  /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #mymapdiv {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOtn0irvRBuShIZHi831nqZ0TgTgsW9sY">
+	</script>
+	<script>
+		function HandleClick() {
+			var ee = document.getElementById("ddlchoice");
+			var str = ee.options[ee.selectedIndex].value;
+			
+			document.getElementById('debugdiv').innerHTML = str;
+			
+			var map;
+			if (str == 'coral') {
+				map = new google.maps.Map(document.getElementById('mymapdiv'), {
+											center: {lat: 21.2989184, lng: -157.8619406},
+											zoom: 17
+											});
+			}
+			else {
+				
+				map = new google.maps.Map(document.getElementById('mymapdiv'), {
+											center: {lat: 21.3169229, lng: -157.8428666},
+											zoom: 17
+											});
+			}
+		}
+	</script>
+  </head>
+  <body>
+	<select id="ddlchoice">
+		<option value="coral">TPJJ Coral Street</option>
+		<option value="park">TPJJ Papakolea Park</option>
+	</select>
+	<button type="button" onclick="HandleClick()">GO</button>
+	<div id="debugdiv">NOTHING</div>
+    <div id="mymapdiv"></div>
+  </body>
+</html>
